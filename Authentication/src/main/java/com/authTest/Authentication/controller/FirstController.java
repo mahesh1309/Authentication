@@ -8,11 +8,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/authentication")
+@RequestMapping("/")
 public class FirstController {
 	
-	@GetMapping("/name")
+	@GetMapping("email")
 	public Principal getName(Principal principal) {
 		return principal;
+	}
+	@GetMapping
+	public String sayHi() {
+		return "Here you go!";
 	}
 }
