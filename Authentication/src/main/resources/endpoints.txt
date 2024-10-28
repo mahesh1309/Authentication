@@ -1,0 +1,2 @@
+googleAuth: https://localhost:1234/oauth2/authorization/google
+facebookAuth: https://localhost:1234/oauth2/authorization/facebook

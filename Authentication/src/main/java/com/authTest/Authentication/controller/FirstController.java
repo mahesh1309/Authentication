@@ -10,13 +10,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/")
 public class FirstController {
-	
+
+	@GetMapping("/home")
+	public String homePage(){
+		return "This is home/page";
+	}
+
 	@GetMapping("email")
 	public Principal getName(Principal principal) {
 		return principal;
 	}
+	
+	
 	@GetMapping
-	public String sayHi() {
-		return "Here you go!";
+	public String sayHi(Principal principal) {
+		return "Hey "+ principal.getName();
 	}
 }
